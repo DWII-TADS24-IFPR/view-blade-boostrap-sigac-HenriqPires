@@ -11,18 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('niveis', function (Blueprint $table) {
+        Schema::create('nivels', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
             $table->timestamps();
             $table->softDeletes();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('niveis');
+        Schema::dropIfExists('nivels');
     }
 };

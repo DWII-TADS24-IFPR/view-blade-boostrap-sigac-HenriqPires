@@ -10,5 +10,10 @@ class Nivel extends Model
     use SoftDeletes;
 
     protected $fillable = ['nome', 'email'];
+
+    public function cursos()
+{
+    return $this->hasMany(Curso::class); // 1:N
 }
-//nome
+
+}

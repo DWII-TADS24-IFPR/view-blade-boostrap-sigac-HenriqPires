@@ -10,7 +10,18 @@ class Declaracao extends Model
     use SoftDeletes;
 
     protected $fillable = ['nome', 'email'];
+
+  public function aluno()
+ {
+    return $this->belongsTo(Aluno::class); // 1:N
+ }
+
+ public function comprovante()
+ {
+    return $this->belongsTo(Comprovante::class); // 1:1
+ }
+
 }
-//tipo
+//id
 //aluno_id
-//data_emissao
+//comprovante

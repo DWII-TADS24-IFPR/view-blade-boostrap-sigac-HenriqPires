@@ -13,7 +13,12 @@ class Turma extends Model
 
     public function curso()
     {
-        return $this->belongsTo(Curso::class);  // Relacionamento com Curso
+        return $this->belongsTo(Curso::class);  // relacionamento com curso 1:N
+    }
+
+    public function alunos()
+    {
+    return $this->hasMany(Aluno::class); // 1:N
     }
 }
 //curso_id

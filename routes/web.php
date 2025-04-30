@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\NivelController;
 
+
+Route::resource('nivels', NivelController::class);
 
 Route::get('/', function () {
     return view('welcome');
