@@ -9,7 +9,7 @@ class Categoria extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['nome'];
+    protected $fillable = ['nome', 'maximo_horas', 'curso_id'];
 
 public function curso()
 {

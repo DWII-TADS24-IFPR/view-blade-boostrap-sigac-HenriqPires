@@ -9,7 +9,7 @@ class Documento extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['nome', 'email'];
+    protected $fillable = ['nome', 'categoria_id', 'user_id'];
 
   public function categoria()
  {

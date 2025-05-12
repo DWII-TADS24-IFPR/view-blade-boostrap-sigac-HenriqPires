@@ -1,0 +1,15 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h1>Cadastrar Turma</h1>
+
+    <form action="{{ route('turmas.store') }}" method="POST">
+        @csrf
+        @include('turmas.form')
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="{{ route('turmas.index') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+@endsection

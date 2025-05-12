@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('declaracoes', function (Blueprint $table) {
             $table->id();
+            $table->string('hash')->unique();
+            $table->dateTime('data');
+            $table->foreignId('aluno_id')->constrained()->onDelete('cascade');
+            $table->foreignId('comprovante_id')->constrained()->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nome');
+            $table->float('maximo_horas');
+            $table->foreignId('curso_id')->constrained()->onDelete('cascade');            $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
